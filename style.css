@@ -1,0 +1,246 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: white;
+    background-color: black;
+    text-align: center;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: black;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: gray;
+  } 
+  /* Central Image and Slogan Section */
+  #main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }
+  
+  .central-content {
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .slogan {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .tagline {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #ccc;
+  }
+  
+  .central-image {
+    width: 200%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: -140px;
+    margin-right: -80px;
+  }
+/* Card Styling */
+  /* Card Styling */
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 60px auto;  /* Space between cards */
+    padding: 20px;  /* Inner space inside the card */
+    background-color: #4b0082;  /* Slightly purplish background */
+    color: white;
+    border-radius: 12px;  /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 4px 4px 8px rgba(43, 3, 75, 0.509);  /* Subtle shadow for depth */
+    opacity: 1;  /* Set to 1 for testing without JavaScript */
+    transform: translateY(0);  /* Start at the correct position */
+    transition: opacity 1s ease, transform 1s ease;
+    animation: flowPurple 10s ease-in-out infinite;
+  }
+
+  @keyframes flowPurple {
+    0% {
+      background-color: rgba(153, 91, 177, 0.167);
+    }
+    50% {
+      background-color: rgba(187, 143, 206, 0.201);
+    }
+    75% {
+      background-color: rgba(189, 99, 227, 0.201);
+    }
+    100% {
+      background-color: rgba(156, 89, 182, 0.178);
+    }
+  }
+  /* Alternate layout for every other card */
+  .card:nth-child(even) .text {
+    order: 2;  /* Swap text and image for alternating layout */
+  }
+  
+  /* Text Styling inside the Card */
+  .card .text {
+    flex: 1;
+    padding: 15px;  /* Inner padding for text */
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  /* Media Styling for Image or Video */
+  .card .media {
+    flex: 1;
+    padding: 15px;  /* Inner padding for media */
+  }
+  
+  .card img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;  /* Rounded corners for image */
+  }
+  
+/* Custom Scrollbar */
+   body {
+    scrollbar-width: thin;
+    scrollbar-color: #8a2be2 transparent;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #8a2be2;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #00ced1;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Floating/Wiggling Animation */
+@keyframes float {
+    0% {
+      transform: rotate(0deg) translateY(0px);
+    }
+    25% {
+      transform: rotate(-2deg) translateY(-5px);
+    }
+    50% {
+      transform: rotate(2deg) translateY(0px);
+    }
+    75% {
+      transform: rotate(-1deg) translateY(5px);
+    }
+    100% {
+      transform: rotate(0deg) translateY(0px);
+    }
+  }
+  
+  .central-image {
+    animation: float 4s ease-in-out infinite;
+  }
+
+/* Typewriter Effect with Corrected Steps */
+.tagline {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    width: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    color: #ccc;
+    line-height: 1.2;
+    height: 1.2em;
+    animation: typewriter 8s steps(60, end) forwards, blinkCursor 0.75s step-end infinite;
+  }
+  
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blinkCursor {
+    0%, 100% {
+      border-right-color: white;
+    }
+    50% {
+      border-right-color: transparent;
+    }
+  }
+
+  
+/* Flowing Color Effect with More White */
+.slogan {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #ffffff, #ffffff, #8a2be2, #00ced1, #ffffff, #ffffff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 6s ease infinite;
+  }
+  
+  @keyframes gradientFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
