@@ -22,7 +22,7 @@
         <li><a href="#step3">Step 3</a></li>
         <li><a href="#step4">Step 4</a></li>
         <li><a href="#step5">Step 5</a></li>
-        <li><a href="#about">About Me</a></li>
+        <li><a href="/AboutMe.html">About Me</a></li>
       </ul>
     </div>
   </nav>
@@ -38,23 +38,87 @@
   
   <!-- Cards for Each Step -->
   <section id="step1" class="card">
-    <div class="text">Step 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</div>
-    <div class="media">
-      <img src="image1.jpg" alt="Step 1 Image">
+    <div class="text"> 
+      <h2 class="heading">Step 1: Constructing Boolean Expressions</h2>
+      <p>This is the first step in the development of the Birthday Circuit. 
+        I began by constructing a truth table with 3 inputs (denoted as X, Y, and Z). 
+        After this, I set 7 outputs, corresponding to the 7 segments of the 7-segment display. 
+        The digits used in my birthday are '-', '0', and '1'. 
+        After constructing a general truth table, I constructed individual truth tables for each of the letters in the 7-segment display. 
+        These tables were then k-mapped in order to extract the simplified Boolean expression. 
+        Finally, the Boolean expressions for each of the letters were constructed. 
+        (Note that my birthday, 01-11-10, happens to be in binary with only 3 possible digits, so most of these expressions will be unnecessary in the code, as the other segments can be derived based upon the values of simply a and b)
+      </p>
+    </div>
+    <div class="media media-centered">
+      <img src="image1.jpg" alt="Step 1 Image 1">
+      <img src="image2.jpg" alt="Step 1 Image 2">
     </div>
   </section>
 
   <section id="step2" class="card">
-    <div class="media">
-      <img src="image2.jpg" alt="Step 2 Image">
+    <div class="text"> 
+      <h2 class="heading">Step 2: Arduino Nano with Switches</h2>
+      <p> After constructing the boolean expressions, it was time to code the arduino nano.
+          This invovled reading the 3 inputs from pins 10, 11, and 12 (I connected these to the switches on the trainer).
+          Then, I proceeded to make the outputs, by writing the boolean expressions in the void loop along with conditionals.
+          The output pins (3 -> 8) were then connected to the corresponding letters on the display. Using this setup, 
+          I could switch the switches in order from 000 all the way to 111 
+          and display the digits of my birthday in the correct order. 
+      </p>
     </div>
-    <div class="text">Step 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</div>
+    <div class="media media-centered">
+      <img src="image1.jpg" alt="Step 1 Image 1">
+      <img src="image2.jpg" alt="Step 1 Image 2">
+    </div>
   </section>
 
   <section id="step3" class="card">
-    <div class="text">Step 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</div>
-    <div class="media">
-      <img src="image3.jpg" alt="Step 3 Image">
+    <div class="text"> 
+      <h2 class="heading">Step 3: Using the pulse switch for Input Signals</h2>
+      <p> Now that the hardware was working with inputs from the switches, 
+          I modified the circuit to work with the pulse switch. 
+          This also required the 74193 counter IC. The three outputs on this IC were connected to pins 10, 11, 12 (inputs to the Nano). 
+          The input to the IC was then connected to the pulse switch, 
+          while the 'Clear' input on the IC was connected to a separate input switch turned off at the moment. 
+          (This switch resets my birthday back to 0 after it has been completed). 
+      </p>
+    </div>
+    <div class="media media-centered">
+      <img src="image1.jpg" alt="Step 1 Image 1">
+      <img src="image2.jpg" alt="Step 1 Image 2">
+    </div>
+  </section>
+
+  <section id="step4" class="card">
+    <div class="text"> 
+      <h2 class="heading">Step 4: 555 Timer and Potentiometer for Input</h2>
+      <p> This was by far the most challenging step, as multiple new components were introduced. 
+          A battery, potentiometer, 555 timer IC, a capacitor, along with a resistor was added. 
+          Rather than the input signal from the pulse switch, now the input signal was to come from the 555 timer to the counter IC. 
+          'Clear' was also set to ground. The battery was now used to supply power to the breadboard and arduino rather than the trainer.
+          A major challenge was debugging, as the number often remained stagnant and didn't alter due to capacitance or resistance of the added units. 
+          Finally, with this setup, the circuit can display my birthday at varying speeds, set by the potentiometer. 
+      </p>
+    </div>
+    <div class="media media-centered">
+      <img src="image1.jpg" alt="Step 1 Image 1">
+      <img src="image2.jpg" alt="Step 1 Image 2">
+    </div>
+  </section>
+
+  <section id="step5" class="card">
+    <div class="text"> 
+      <h2 class="heading">Step 5: Neatness</h2>
+      <p> Finally after having completed the circuit, I had to ensure it was neat. 
+          This meant that there shouldn't have been any crossing wires or bridges. 
+          Naturally, along the way, certain connections were altered and I had to repeatedly debug. 
+          Here is a picture of the final product:
+      </p>
+    </div>
+    <div class="media media-centered">
+      <img src="image1.jpg" alt="Step 1 Image 1">
+      <img src="image2.jpg" alt="Step 1 Image 2">
     </div>
   </section>
 

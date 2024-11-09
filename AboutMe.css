@@ -1,0 +1,129 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: white;
+    background-color: black;
+    text-align: center;
+  }
+
+/* My Image */
+
+/* Navigation Bar */
+  nav {
+    background-color: black;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+
+  .Heading {
+    font-size: 24px;
+    color: white;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: gray;
+  } 
+
+  /* Actual about me styling */
+  /* General Font and Container Styling */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    padding: 40px;
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  .AboutMe {
+    max-width: 600px;
+    background-color: #292929;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    margin-bottom: 20px; /* Space between card and divider */
+  }
+  
+  /* Styling for the Image */
+  .Image {
+    width: 150px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Name Styling */
+  .AboutMe h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #ffffff;
+  }
+  
+  /* Birthday with Subtle Color Animation */
+  .AboutMe h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8a2be2;
+    animation: colorShift 6s ease-in-out infinite;
+    margin: 10px 0;
+  }
+  
+  @keyframes colorShift {
+    0%, 100% {
+      color: #b3b8f5;
+    }
+    50% {
+      color: #b5f6f7;
+    }
+  }
+  
+  /* Description Styling with Increased Line Spacing */
+  .description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #d3d3d3;
+    margin-top: 20px;
+  }
+  
+  /* Centered Divider Below the Card */
+  .container::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #8a2be2, #00ced1);
+    margin: 20px auto 0; /* Center and add space from the card */
+    border-radius: 2px;
+  }
+  

@@ -25,13 +25,18 @@
     display: flex;
     justify-content: center;
   }
-  
+
   .nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
   }
-  
+
+  .Heading {
+    font-size: 24px;
+    color: white;
+  }
+
   .nav-links a {
     color: white;
     text-decoration: none;
@@ -75,24 +80,25 @@
     height: auto;
     border-radius: 10px;
     margin-top: -140px;
-    margin-right: -80px;
+    margin-right: -110px;
+    margin-left: 10px;
   }
 /* Card Styling */
   /* Card Styling */
   .card {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     max-width: 900px;
-    margin: 60px auto;  /* Space between cards */
-    padding: 20px;  /* Inner space inside the card */
-    background-color: #4b0082;  /* Slightly purplish background */
+    margin: 60px auto;
+    padding: 20px;
+    background-color: rgba(155, 89, 182, 0.1);
     color: white;
-    border-radius: 12px;  /* Rounded corners */
     border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 4px 4px 8px rgba(43, 3, 75, 0.509);  /* Subtle shadow for depth */
-    opacity: 1;  /* Set to 1 for testing without JavaScript */
-    transform: translateY(0);  /* Start at the correct position */
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px rgba(43, 3, 75, 0.509);
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 1s ease, transform 1s ease;
     animation: flowPurple 10s ease-in-out infinite;
   }
@@ -116,26 +122,35 @@
     order: 2;  /* Swap text and image for alternating layout */
   }
   
-  /* Text Styling inside the Card */
-  .card .text {
-    flex: 1;
-    padding: 15px;  /* Inner padding for text */
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: left;
-  }
-  
-  /* Media Styling for Image or Video */
-  .card .media {
-    flex: 1;
-    padding: 15px;  /* Inner padding for media */
-  }
-  
-  .card img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 8px;  /* Rounded corners for image */
-  }
+/* Bold Heading */
+.card .heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+}
+
+/* Description Paragraph */
+.card .text p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+/* Centered Media for Step 1 */
+.media-centered {
+  display: flex;
+  justify-content: center;
+  gap: 20px;  /* Space between images */
+  margin-top: 20px;
+  flex-wrap: wrap;  /* Allow images to wrap on smaller screens */
+}
+
+.media-centered img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
   
 /* Custom Scrollbar */
    body {
