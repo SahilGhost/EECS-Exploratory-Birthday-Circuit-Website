@@ -97,12 +97,17 @@
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 12px;
     box-shadow: 4px 4px 8px rgba(43, 3, 75, 0.509);
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 0;
+    transform: translateY(36px);
     transition: opacity 1s ease, transform 1s ease;
     animation: flowPurple 10s ease-in-out infinite;
   }
 
+  .card.visible {
+    opacity: 1;
+    transform: translateY(0);  /* Slide to original position */
+  }
+  
   @keyframes flowPurple {
     0% {
       background-color: rgba(153, 91, 177, 0.167);
@@ -111,10 +116,10 @@
       background-color: rgba(187, 143, 206, 0.201);
     }
     75% {
-      background-color: rgba(189, 99, 227, 0.201);
+      background-color: rgba(95, 9, 133, 0.201);
     }
     100% {
-      background-color: rgba(156, 89, 182, 0.178);
+      background-color: rgba(213, 147, 239, 0.178);
     }
   }
   /* Alternate layout for every other card */
