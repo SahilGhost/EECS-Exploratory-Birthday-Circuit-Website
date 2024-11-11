@@ -1,0 +1,7 @@
+Step1Img.png filter=lfs diff=lfs merge=lfs -text
+Step2Img.png filter=lfs diff=lfs merge=lfs -text
+Step1Img2.jpg filter=lfs diff=lfs merge=lfs -text
+Step2Video.mp4 filter=lfs diff=lfs merge=lfs -text
+Step3Img.png filter=lfs diff=lfs merge=lfs -text
+Step3Vid.mp4 filter=lfs diff=lfs merge=lfs -text
+sketch_nov11a.ino filter=lfs diff=lfs merge=lfs -text
