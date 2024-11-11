@@ -11,6 +11,11 @@
     background-color: black;
     text-align: center;
   }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Adjust to match navbar height */
+  }
   
   /* Navigation Bar */
   nav {
@@ -101,6 +106,7 @@
     transform: translateY(36px);
     transition: opacity 1s ease, transform 1s ease;
     animation: flowPurple 10s ease-in-out infinite;
+    flex-direction: column;
   }
 
   .card.visible {
@@ -122,10 +128,6 @@
       background-color: rgba(213, 147, 239, 0.178);
     }
   }
-  /* Alternate layout for every other card */
-  .card:nth-child(even) .text {
-    order: 2;  /* Swap text and image for alternating layout */
-  }
   
 /* Bold Heading */
 .card .heading {
@@ -142,7 +144,7 @@
   margin-top: 0;
 }
 
-/* Centered Media for Step 1 */
+/* Centered Media */
 .media-centered {
   display: flex;
   justify-content: center;
@@ -153,8 +155,9 @@
 
 .media-centered img {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   border-radius: 8px;
+  object-fit: cover;
 }
   
 /* Custom Scrollbar */
