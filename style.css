@@ -161,7 +161,7 @@
 }
   
 /* Custom Scrollbar */
-   body {
+  body {
     scrollbar-width: thin;
     scrollbar-color: #8a2be2 transparent;
   }
@@ -267,3 +267,9 @@
       background-position: 0% 50%;
     }
   }
+
+a {
+  color: white;
+  font-family: 'Questrial';
+  transition: color 0.3s;
+}
