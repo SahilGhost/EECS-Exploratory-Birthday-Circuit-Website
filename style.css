@@ -273,3 +273,10 @@ a {
   font-family: 'Questrial';
   transition: color 0.3s;
 }
+
+#Special {
+  color: palegoldenrod;
+  transition: color 0.3s;
+  font-family: 'Georgia', 'Times New Roman', 'Times, serif';
+  font-size: 15;
+}
